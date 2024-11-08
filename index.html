@@ -54,26 +54,25 @@
 
 <script>
     const bu = document.querySelector('.b');
-    const drop = querySelector('.dropdown');
+    const drop = document.querySelector('.dropdown');
     var i =0
-    bu.addEventListener('click',function()=>{
+    bu.addEventListener('click',toggle)
 
-        switch (i) {
-            case 0:
-                drop.style.display = 'block';
-                i =1;
-            case 1:
-                drop.style.display = 'none';
-                i = 0;
-                
-                break;
-        
-            default:
-                break;
+    function toggle(){
+        if(i == 0){
+            drop.style.display = 'block';
+            i =1;
+        }else{
+            drop.style.display = 'none';
+            i =0;
         }
+    }
+
+     
+   
         
 
-    });
+  
 </script>
 </body>
 </html>
